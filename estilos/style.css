@@ -1,0 +1,172 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+:root{
+    --fonte-principal:"Outfit", sans-serif;
+
+    --cor-principal: #7550AF;
+    --cor-fundo: rgb(238, 243, 253);
+}
+
+body{
+    max-width: 100vw;
+    overflow-x: hidden;
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-fundo);
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+header h2{
+    color: var(--cor-principal);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+main h2{
+    color: var(--cor-principal);
+    padding: 10px;
+}
+
+.monitoring{
+    display: flex;
+    gap: 5px;
+}
+
+.monitoringContent:first-child, .monitoringContent:last-child{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    border-radius: 10px;
+    padding: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: white;
+    box-shadow: 0px 5px 10px rgba(212, 212, 212, 0.582);
+}
+
+.monitoringContent img{
+    width: 50px;
+    height: 50px;
+}
+
+.chatIA{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 5px 10px rgba(212, 212, 212, 0.582);
+}
+
+.chatIA img{
+    width: 80px;
+    height: 80px;
+}
+
+.buttons{
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.buttons button{
+    height: 40px;
+    width: 40px;
+    border: none;
+    background: none;
+    padding: 10px;
+    color: var(--cor-principal);
+}
+
+.buttons button i{
+    font-size: 1.5em;
+}
+
+.rewards{
+    min-height: 150px;
+    gap: 30px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 5px 10px rgba(212, 212, 212, 0.582);
+}
+
+.rewards button{
+    height: 35px;
+    width: 80px;
+    border: none;
+    background-color: #8f8e8f;
+    color: white;
+    border-radius: 10px;
+}
+
+.progress{           
+    margin-bottom: 12px;
+    width: 80%;
+    background-color: gray;
+    height: 12px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.progressBar{
+    width: 66%;
+    background-color: var(--cor-principal);
+    height: 12px;
+    border-radius: 10px;
+}
+
+footer{
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+    padding: 5px;
+}
+
+footer > nav{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+footer > nav > button{
+    height: 40px;
+    width: 40px;
+    border: none;
+    background: none;
+    padding: 10px;
+    color: var(--cor-principal);
+}
+
+footer > nav > button > i{
+    font-size: 2em;
+}
+
