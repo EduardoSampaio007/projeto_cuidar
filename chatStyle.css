@@ -38,6 +38,11 @@ body{
     text-align: center;
 }
 
+.chatHeader h1{
+    padding: 20px;
+    color: var(--cor-principal);
+}
+
 .chat-tabs{
     display: flex;
     border-bottom: 2px solid #e0e0e0;
