@@ -154,19 +154,20 @@ footer{
 footer > nav{
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 50px;
 }
 
-footer > nav > button{
+footer > nav > a {
     height: 40px;
     width: 40px;
-    border: none;
-    background: none;
-    padding: 10px;
+    display: flex;          
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; 
     color: var(--cor-principal);
 }
 
-footer > nav > button > i{
-    font-size: 2em;
+footer > nav > a > i{
+    font-size: 1.5em;
 }
 
