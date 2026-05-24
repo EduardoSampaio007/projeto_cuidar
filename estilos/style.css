@@ -10,6 +10,15 @@
     --cor-fundo: rgb(238, 243, 253);
 }
 
+@keyframes entrarSuave {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 body{
     max-width: 100vw;
     overflow-x: hidden;
@@ -33,6 +42,7 @@ main{
     display: flex;
     flex-direction: column;
     align-content: center;
+    animation: entrarSuave 0.4s ease-out forwards;
 }
 
 main h2{
@@ -164,7 +174,23 @@ footer > nav > a {
     align-items: center;
     justify-content: center;
     text-decoration: none; 
-    color: var(--cor-principal);
+    color: #8c8c8c;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+footer > nav > a.active {
+    color: var(--cor-principal); 
+}
+
+footer > nav > a,
+footer > nav > a *,
+footer > nav > a:focus,
+footer > nav > a:active,
+footer > nav > a:visited {
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-tap-highlight-color: transparent;
 }
 
 footer > nav > a > i{
