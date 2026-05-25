@@ -64,5 +64,22 @@
             </a>
         </nav>
     </footer>
+
+    <script>
+        const abas = document.querySelectorAll('.chat-btn');
+        const containerMensagens = document.querySelector('.chat-container');
+
+        abas.forEach((aba, indice) => {
+            aba.addEventListener('click', () => {
+                document.querySelector('.chat-btn.active').classList.remove('active');
+                aba.classList.add('active');
+                if (indice === 0) {
+                    containerMensagens.style.display = 'block'; 
+                } else {
+                    containerMensagens.style.display = 'none'; 
+                }
+            });
+        });
+    </script>
 </body>
 </html>
