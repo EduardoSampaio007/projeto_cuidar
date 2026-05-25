@@ -1,0 +1,246 @@
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS E VARIÁVEIS
+   ========================================================================== */
+:root {
+    --bg-app: #eef2f7;
+    --bg-card: #ffffff;
+    --primary-color: #7550AF;; /* Roxo principal do seu app */
+    --primary-light: #f3e8ff; /* Roxo claro para estados ativos */
+    --text-main: #333333;
+    --text-muted: #666666;
+    --border-color: #b0c4de;
+    --border-active: #5a189a;
+    --radius-lg: 16px;
+    --radius-md: 8px;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    --fonte-principal:"Outfit", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fonte-principal);
+}
+
+body {
+    background-color: #333; /* Fundo escuro simulando o ambiente de teste */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ==========================================================================
+   2. CONTAINER DO SMARTPHONE
+   ========================================================================== */
+.app-container {
+    background-color: var(--bg-app);
+    width: 100%;
+    max-width: 412px; /* Largura padrão de um smartphone moderno */
+    height: 844px;    /* Altura padrão (proporção 19.5:9) */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    padding: 16px 16px 76px 16px; /* Espaço para o topo e margem inferior do menu */
+}
+
+/* ==========================================================================
+   3. CABEÇALHO (HEADER)
+   ========================================================================== */
+.checkout-header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.checkout-header h1 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   4. FORMULÁRIO E CARDS
+   ========================================================================== */
+.checkout-form {
+    flex: 1;
+    overflow-y: auto; /* Permite rolar os cards se a tela for pequena */
+    padding-bottom: 10px;
+    justify-content: space-between; /* Distribui os cards proporcionalmente no espaço restante */
+    overflow: hidden;
+}
+
+/* Esconder a barra de rolagem para deixar o visual do app mais limpo */
+.checkout-form::-webkit-scrollbar {
+    width: 0px;
+}
+
+.card {
+    background-color: var(--bg-card);
+    border-radius: var(--radius-lg);
+    padding: 16px;
+    margin-bottom: 14px;
+    box-shadow: var(--shadow);
+}
+
+.card h2 {
+    color: var(--text-main);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+.card h2 .optional-text {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 400;
+    margin-top: 2px;
+}
+
+/* ==========================================================================
+   5. COMPONENTES INTERATIVOS (BOTÕES E SELEÇÕES)
+   ========================================================================== */
+.options-group {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+/* Botões padrão de opção (Tranquilo, Moderado, Intenso, Sim, Não) */
+.btn-option {
+    flex: 1;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: var(--radius-md);
+    padding: 10px 4px;
+    font-size: 0.9rem;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-tap-highlight-color: transparent
+}
+
+/* Ajuste específico para o grupo de 2 botões (Sim/Não) para não ficarem largos demais */
+.options-group.row-2 .btn-option {
+    max-width: 120px;
+}
+
+/* Grupo de Baterias */
+.battery-group {
+    gap: 24px;
+}
+
+.btn-battery {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.8rem;
+    transition: transform 0.2s ease;
+    padding: 4px;
+}
+
+.btn-battery:active {
+    transform: scale(1.1);
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-tap-highlight-color: transparent
+}
+
+/* Campo de Texto (Opcional) */
+textarea {
+    width: 100%;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 12px;
+    font-size: 0.9rem;
+    resize: none;
+    outline: none;
+    color: var(--text-main);
+    transition: border-color 0.2s ease;
+}
+
+textarea:focus {
+    border-color: var(--primary-color);
+}
+
+/* ==========================================================================
+   6. BOTÃO PRINCIPAL (SUBMIT)
+   ========================================================================== */
+.btn-submit {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md); /* Arredondado conforme o padrão anterior */
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+    box-shadow: 0 4px 12px rgba(123, 44, 191, 0.3);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-submit:hover {
+    background-color: var(--border-active);
+}
+
+.btn-submit:active {
+    transform: scale(0.98);
+}
+
+/* ==========================================================================
+   7. MENU INFERIOR (BOTTOM NAV)
+   ========================================================================== */
+
+footer{
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+    padding: 5px;
+}
+
+footer > nav{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+footer > nav > a {
+    height: 40px;
+    width: 40px;
+    display: flex;          
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; 
+    color: #8c8c8c;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+footer > nav > a.active {
+    color: var(--primary-color); 
+}
+
+footer > nav > a,
+footer > nav > a *,
+footer > nav > a:focus,
+footer > nav > a:active,
+footer > nav > a:visited {
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-tap-highlight-color: transparent;
+}
+
+footer > nav > a > i{
+    font-size: 1.5em;
+}

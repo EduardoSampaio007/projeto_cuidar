@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuidar de quem cuida</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/checkoutStyle.css">
+</head>
+<body>
+    <main class="app-container">
+        
+        <header class="checkout-header">
+            <h1>Hora do check-out</h1>
+        </header>
+
+        <form class="checkout-form">
+
+            <section class="card">
+                <h2>Como estava o volume de trabalho hoje?</h2>
+                <div class="options-group">
+                    <button type="button" class="btn-option">Tranquilo</button>
+                    <button type="button" class="btn-option">Moderado</button>
+                    <button type="button" class="btn-option active">Intenso</button>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Sentiu-se apoiada pelos colegas?</h2>
+                <div class="options-group row-2">
+                    <button type="button" class="btn-option">Sim</button>
+                    <button type="button" class="btn-option active">Não</button>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Como está sua energia agora?</h2>
+                <div class="options-group battery-group">
+                    <button type="button" class="btn-battery" aria-label="Energia Alta">
+                        <i class="fa-solid fa-battery-full"></i> 
+                    </button>
+                    <button type="button" class="btn-battery" aria-label="Energia Média">
+                        <i class="fa-solid fa-battery-half"></i>
+                    </button>
+                    <button type="button" class="btn-battery" aria-label="Energia Baixa">
+                        <i class="fa-solid fa-battery-empty"></i>
+                    </button>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>
+                    Quer registrar algo que aconteceu?
+                    <span class="optional-text">(Opcional)</span>
+                </h2>
+                <textarea 
+                    name="observacoes" 
+                    id="observacoes" 
+                    rows="4" 
+                    placeholder="Digite aqui..."
+                    disabled>
+                </textarea>
+            </section>
+
+            <button type="submit" class="btn-submit">
+                Finalizar plantão (+20 pontos)
+            </button>
+
+        </form>
+        
+        <footer>
+            <nav>
+                <a href="index.html" class="nav-link">
+                    <i class="fa-solid fa-house"></i>
+                </a>
+
+                <a href="chat.html" class="nav-link">
+                    <i class="fa-solid fa-message"></i>
+                </a>
+
+                <a href="rewards.html" class="nav-link">
+                    <i class="fa-solid fa-award"></i>
+                </a>
+
+                <a href="checkout.html" class="nav-link active">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                </a>
+            </nav>
+    </footer>
+
+    </main>
+</body>
+</html>
