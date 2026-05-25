@@ -24,6 +24,7 @@ body{
     overflow-x: hidden;
     font-family: var(--fonte-principal);
     background-color: var(--cor-fundo);
+    animation: entrarSuave 0.4s ease-out forwards;
 }
 
 main h1{
