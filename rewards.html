@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuidar de quem cuida</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="rewardsStyle.css">
+</head>
+<body>
+    <main class="rewards-screen">
+        <h1>Recompensas</h1>
+
+        <div class="points-badge-card">
+            <i class="fa-solid fa-award"></i>
+            <h3>Você tem 100 pontos</h3>
+        </div>
+
+        <section class="mission-section">
+            <div class="mission-item checked">
+                <span>• Check-in emocional</span>
+                <input type="checkbox" checked disabled>
+            </div>
+
+            <div class="mission-item checked">
+                <span>• Auto-avaliação</span>
+                <input type="checkbox" checked disabled>
+            </div>
+
+            <div class="mission-item">
+                <span>• Meta de sono</span>
+                <input type="checkbox" disabled>
+            </div>
+        </section>
+        
+        <section class="redeem-section">
+            <h2>Resgate suas recompensas</h2>
+
+            <div class="redeem-cards-container">
+                <div class="redeem-card">
+                    <i class="fa-solid fa-person-walking-luggage"></i>
+                    <span class="redeem-title">Folga extra</span>
+                    <span class="redeem-pts">150 pts</span>
+                    <div class="progress small-bar">
+                        <div class="progressBar" style="width: 66%;"></div>
+                    </div>
+                </div>
+                <div class="redeem-card empty"></div>
+                <div class="redeem-card empty"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <nav>
+            <a href="index.html" class="nav-link">
+                <i class="fa-solid fa-house"></i>
+            </a>
+
+            <a href="chat.html" class="nav-link">
+                <i class="fa-solid fa-message"></i>
+            </a>
+
+            <a href="rewards.html" class="nav-link active">
+                <i class="fa-solid fa-award"></i>
+            </a>
+
+            <a href="#" class="nav-link">
+                <i class="fa-solid fa-clipboard-list"></i>
+            </a>
+        </nav>
+    </footer>
+</body>
+</html>
